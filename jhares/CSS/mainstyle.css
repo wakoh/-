@@ -7,7 +7,7 @@ html
 	background-image: url("/images/favicon.ico");        
 	background-position: 8px 8px;
 	padding: 0px;
-	margin: 0px       
+	margin: 0px;       
     
 }
 	
@@ -31,7 +31,7 @@ body
 
 img
 {
-float:right
+float:right;
 }
 
 
