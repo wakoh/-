@@ -102,6 +102,7 @@ li a {
     text-align: left;
    text-decoration: none;
     font: italic 100% calibri;
+	
 }
 
 li a:hover:not(.active) {
@@ -111,8 +112,12 @@ li a:hover:not(.active) {
 li a.active {
     color: black;
     background-color: darkseagreen;
+	
 }
+a.selected
+background-color: darkseagreen
 
 p { text-align: left;
     }
 
+
