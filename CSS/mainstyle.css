@@ -105,12 +105,12 @@ li a {
 	
 }
 
-li a:hover:not(.active) {
+li a:hover{
     background-color: darkseagreen;
 }
 
 li a.active {
-    color: black;
+   
     background-color: darkseagreen;
 	
 }
