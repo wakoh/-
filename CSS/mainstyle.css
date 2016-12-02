@@ -110,7 +110,7 @@ li a:hover:not(.active) {
 
 li a.active {
     color: black;
-    background-color: white;
+    background-color: darkseagreen;
 }
 
 p { text-align: left;
