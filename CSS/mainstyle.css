@@ -109,7 +109,7 @@ li a:hover{
     background-color: darkseagreen;
 }
 
-li a.active {
+li a.selected {
    
     background-color: darkseagreen;
 	
@@ -122,4 +122,4 @@ background-color: darkseagreen;
 p { text-align: left;
     }
 
-
+
