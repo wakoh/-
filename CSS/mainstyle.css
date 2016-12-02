@@ -114,8 +114,10 @@ li a.active {
     background-color: darkseagreen;
 	
 }
-a.selected
-background-color: darkseagreen
+a.selected {
+background-color: darkseagreen;
+}
+
 
 p { text-align: left;
     }
