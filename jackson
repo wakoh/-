@@ -2,8 +2,6 @@
 <!DOCTYPE html>
 <html>
  
-    
-
 <head>
     <title>Pong-court</title>
     <meta charset="UTF-8">
@@ -22,8 +20,8 @@
         var cHeight = sCanvas.height;
         var cWidth = sCanvas.width;
         var img = new Image();
-        img.src= 'http://i.imgur.com/cDriAMY.jpg'; 
-        var beep = new Audio('http://vocaroo.com/i/s1C7lM7giiNJ');
+        img.src= 'pongcourt.jpg'; 
+        var beep = new Audio('bounce.wav');
         //var changedirection = false; //
        var score1 = 0;  // for score board
        var score2 = 0;  // for score board
