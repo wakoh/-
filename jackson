@@ -9,13 +9,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <style>
-    
-        html {
-            background-color:chocolate;
-     }
-        
-    </style>
 </head>
 <body>
     <canvas id="sCanvas" width="534" height="320" style="border: solid;"></canvas>
