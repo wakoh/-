@@ -10,18 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <style>
-        //*canvas {
-            position: absolute;
-            margin: auto;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0; */
-            
-        }
+    
         html {
             background-color:chocolate;
-        }
+     }
         
     </style>
 </head>
@@ -37,8 +29,8 @@
         var cHeight = sCanvas.height;
         var cWidth = sCanvas.width;
         var img = new Image();
-        img.src= 'pongcourt.jpg'; 
-        var beep = new Audio('bounce.wav');
+        img.src= ('http://i.imgur.com/cDriAMY.jpg'); 
+        var beep = new Audio('http://vocaroo.com/i/s1C7lM7giiNJ');
         //var changedirection = false; //
        var score1 = 0;  // for score board
        var score2 = 0;  // for score board
