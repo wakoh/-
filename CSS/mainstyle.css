@@ -3,7 +3,7 @@
 html
 	{
 	
-background-color:orange;
+background-color:chocolate;
 	//*background-image: url("https://s11.postimg.org/qbcvihrdf/favicon.png");*//        
 	background-position: 8px 8px;
 	padding: 0px;
@@ -40,7 +40,7 @@ float:right
  
    
 h1 {
-color: chocolate;
+color: grey;
  text-align: left;
  font: bold 140% sans-serif;    
 }
@@ -48,7 +48,7 @@ color: chocolate;
 h2 
 	{
 text-align: right;
-    color: white;
+    color: grey;
 	font-size: 14pt; 
 	background-color: lightsteelblue;
 	margin: px -50px 0px -50px;
