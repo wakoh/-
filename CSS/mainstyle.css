@@ -42,7 +42,7 @@ float:right
 h1 {
 color: grey;
  text-align: left;
- font: bold 100% sans-serif;    
+font-size: 14pt; bold; sans-serif;    
 }
 
 h2 
