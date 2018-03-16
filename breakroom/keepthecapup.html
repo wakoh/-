@@ -1,0 +1,691 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+<title>strike NRG</title>
+<meta name="title" content="strike NRG">
+<meta name="description" content="strike NRG">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="_token" content="Xp4SPfksR7MrYJyLf6ZylSw4VQO4uMYONZQP9q2o" />
+<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+<meta property="og:title" content="strike NRG" />
+<meta property="og:description" content="strike NRG" />
+<meta property="og:type" content="Website" />
+<meta property="og:url" content="https://jhar.es/strike" />
+<meta property="og:image" content="https://jhar.es/strike" />
+<meta property="og:site_name" content="Snapple" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/ico/Icon-72@2x.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/ico/Icon@2x.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/ico/Icon-72.png">
+<link rel="apple-touch-icon-precomposed" href="/images/ico/Icon.png">
+<link rel="shortcut icon" href="/images/favicon.ico">
+<meta name="theme-color" content="#e75546">
+<meta name="google-site-verification" content="HdRCHifRbmjl61MFPa34NseVssvxIQmq1P9YmuOAu-4" />
+<script src="https://use.typekit.net/ewi3uwc.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<script type='text/javascript' src='https://service.maxymiser.net/cdn/dpsg/snapple/js/mmcore.js'> </script>
+<script type="application/ld+json">
+  {
+
+    },
+    [
+   
+    ]
+  }
+  </script>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/breakroom.css">
+<link rel="stylesheet" href="/css/breakroom/keepthecapup/style.css">
+<script type="text/javascript">
+
+		        var deeplinks = [];
+        
+					var pageData = [{"name":"keepthecapup","type":"static","template":"keepthecapup","layout_location":"single_pane"}];
+		        
+       
+</script>
+</head>
+<body id="body" class="lang-en keepthecapup" data-app-name="Snapple" data-title="Keep The Cap Up Game | Snapple Break Room" data-slug="keepthecapup" data-loggedin="">
+<script type="text/javascript">
+   
+        var utag_data = {
+                        content_visitor: ["breakroom", "breakroom_keepthecapup", "programs"],
+                        page_name: "keepthecapup",   
+            lang: "en",
+            sign_in: "false",
+            nav_category: "breakroom",
+            sub_category: "keepthecapup",
+                        over21: "0",
+            programs: "breakroom"
+                          
+        }
+
+       
+      
+  </script>
+
+<script type="text/javascript">
+      (function(a,b,c,d){
+      a='//tags.tiqcdn.com/utag/dpsg/snapple/prod/utag.js';
+      b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+      a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+      })();
+  </script>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=256584777698427";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+<script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+<div id="page-wrapper">
+<header class="navbar-wrapper" id="header">
+<nav class="navbar navbar-fixed-top">
+<div class="fluid-container">
+<div class="navbar-header">
+<a class="navbar-brand" href="/">
+<img src="/images/breakroom/keepthecapup/strikes.png" alt="nope">
+</a>
+</div>
+<div id="navbar" class="">
+<ul class="nav navbar-nav">
+
+</ul>
+<ul class="social">
+
+</ul>
+</div>
+</div>
+</nav>
+</header> 
+<div id="breakroom">
+
+<audio id="pop">
+<source src="/sounds/breakroom/keepthecapup/pop.mp3" type="audio/mp4" />
+</audio>
+<div class="modal-instructions purple">
+<div class="modal-instructions-inner">
+<span class="visible-xs"></span>
+<span class="hidden-xs"></span>
+<div class="modal-instructions-button">
+
+</div>
+</div>
+</div>
+<div class="reset purple keep-the-cap-up"></div>
+<div id="breakroom-social" class="social purple keep-the-cap-up">
+<a class="facebook icon" data-social_share="facebook" data-share-copy="I just played Keep The Cap Up in the Snapple Break Room. Give it a spin at Snapple.com!"></a>
+<a class="twitter icon" data-social_share="twitter" data-share-copy="I just played Keep The Cap Up in the @Snapple  Break Room. Give it a spin at Snapple.com!"></a>
+</div>
+<a class="exit purple" href="/breakroom"></a>
+<canvas id="game"> </canvas>
+<script>
+
+//KEEP UP THE CAP GAME
+
+//TO DO
+
+//Pop particles
+//bounce collisions
+//scaling
+//need pattern background from nick
+
+
+// Setting the table for a cross browser HTML5 game. Yum.
+// http://paulirish.com/2011/requestanimationframe-for-smart-animating
+// shim layer with setTimeout fallback
+window.requestAnimFrame = (function(){
+  return  window.requestAnimationFrame       || 
+          window.webkitRequestAnimationFrame || 
+          window.mozRequestAnimationFrame    || 
+          window.oRequestAnimationFrame      || 
+          window.msRequestAnimationFrame     || 
+          function( callback ){
+            window.setTimeout(callback, 1000 / 60);
+          };
+})();
+
+
+// namespace our game,
+var TELE = {
+  WIDTH: 600, 
+  HEIGHT:  1066, 
+  // we'll set the rest of these
+  // in the init function
+  RATIO:  null,
+  currentWidth:  null,
+  currentHeight:  null,
+  canvas: null,
+  ctx:  null,
+  count: 100,
+  score:0,
+  highscore:0,
+  mobileadj:0,
+  // where we store all the dynamic entities in the game
+  entities: [],
+
+    init: function() {
+
+        // ### INITIALIZE OUR MOBILE CANVAS ELEMENT ###
+
+        // this is our canvas element
+        TELE.canvas = document.getElementsByTagName('canvas')[0];
+        // setting this is important
+        // otherwise the browser will
+        // default to 320 x 200
+        //TELE.canvas.width = window.innerWidth;
+        TELE.canvas.width = window.innerWidth;
+        TELE.canvas.height = window.innerHeight - 94;
+
+        if (TELE.canvas.width<450){
+          TELE.mobileadj = TELE.canvas.width/15;
+        }
+
+        // the canvas context enables us to 
+        // interact with the canvas api
+        TELE.ctx = TELE.canvas.getContext('2d');
+        TELE.ctx.font = '4em Museo';
+        TELE.canvas.width < 670 ? TELE.textRatio = 0.6 : TELE.textRatio = 1;
+        TELE.canvas.width < 670 ? TELE.scoreX = 5 : TELE.scoreX = 40;
+        
+        // we need to sniff out Android and iOS
+        // so that we can hide the address bar in
+        // our resize function
+        TELE.ua = navigator.userAgent.toLowerCase();
+        TELE.android = TELE.ua.indexOf('android') > -1 ? true : false;
+        TELE.ios = ( TELE.ua.indexOf('iphone') > -1 || TELE.ua.indexOf('ipad') > -1  ) ? 
+        true : false;
+
+        // this will create some extra space on the
+        // page, allowing us to scroll past
+        // the address bar, thus hiding it.
+        if (TELE.android || TELE.ios) {
+            document.body.style.height = (window.innerHeight + 50) + 'px';
+        }
+
+        // we use a timeout here because some mobile
+        // browsers don't fire if there is not
+        // a short delay
+        window.setTimeout(function() {
+                window.scrollTo(0,1);
+        }, 1);
+
+
+        // ### SCALE CANVAS FOR HDPI DEVICES AND CRISPY CLEAN TEXT ###
+
+        // finally query the various pixel ratios
+      TELE.devicePixelRatio = window.devicePixelRatio || 1,
+      TELE.backingStoreRatio = TELE.ctx.webkitBackingStorePixelRatio ||
+                          TELE.ctx.mozBackingStorePixelRatio ||
+                          TELE.ctx.msBackingStorePixelRatio ||
+                          TELE.ctx.oBackingStorePixelRatio ||
+                          TELE.ctx.backingStorePixelRatio || 1,
+
+      TELE.ratio = TELE.devicePixelRatio / TELE.backingStoreRatio;
+
+    // upscale the canvas if the two ratios don't match
+    if (TELE.devicePixelRatio !== TELE.backingStoreRatio) {
+
+        TELE.oldWidth = TELE.canvas.width;
+        TELE.oldHeight = TELE.canvas.height;
+
+        TELE.canvas.width = TELE.oldWidth * TELE.ratio;
+        TELE.canvas.height = TELE.oldHeight * TELE.ratio;
+
+        TELE.canvas.style.width = TELE.oldWidth + 'px';
+        TELE.canvas.style.height = TELE.oldHeight + 'px';
+
+        // now scale the context to counter
+        // the fact that we've manually scaled
+        // our canvas element
+        TELE.ctx.scale(TELE.ratio, TELE.ratio);
+
+    }
+
+    //scaled draw heights and widths for drawing
+    TELE.dheight = TELE.canvas.height/TELE.ratio;
+    TELE.dwidth = TELE.canvas.width/TELE.ratio;
+
+    // ### LOAD OUR SOUNDS ###
+      TELE.pop = document.getElementById('pop');
+      TELE.pop.addEventListener('ended', function() {
+          this.currentTime = 0;
+      }, false);
+
+      TELE.bottle0 = new Image();
+      TELE.bottle0.src = '/images/breakroom/keepthecapup/bottle0.png';
+      TELE.bottle1 = new Image();
+      TELE.bottle1.src = '/images/breakroom/keepthecapup/bottle1.png';
+      TELE.bottle2 = new Image();
+      TELE.bottle2.src = '/images/breakroom/keepthecapup/bottle2.png';
+      TELE.bottle3 = new Image();
+      TELE.bottle3.src = '/images/breakroom/keepthecapup/bottle3.png';
+      TELE.bottle4 = new Image();
+      TELE.bottle4.src = '/images/breakroom/keepthecapup/bottle4.png';
+      TELE.bottle5 = new Image();
+      TELE.bottle5.src = '/images/breakroom/keepthecapup/bottle5.png';
+      TELE.bottles = [TELE.bottle0, TELE.bottle1, TELE.bottle2, TELE.bottle3, TELE.bottle4, TELE.bottle5];
+      TELE.flavors = [];
+      TELE.bg = new Image();
+      TELE.bg.src = '/images/breakroom/keepthecapup/bg.jpg'
+
+      TELE.spin0 = new Image();
+      TELE.spin0.src = '/images/breakroom/keepthecapup/cap0.png';
+      TELE.spin1 = new Image();
+      TELE.spin1.src = '/images/breakroom/keepthecapup/cap1.png';
+      TELE.spin2 = new Image();
+      TELE.spin2.src = '/images/breakroom/keepthecapup/cap2.png';
+      TELE.spin3 = new Image();
+      TELE.spin3.src = '/images/breakroom/keepthecapup/cap3.png';
+      TELE.spin4 = new Image();
+      TELE.spin4.src = '/images/breakroom/keepthecapup/cap4.png';
+      TELE.spin5 = new Image();
+      TELE.spin5.src = '/images/breakroom/keepthecapup/cap5.png';
+      TELE.spin6 = new Image();
+      TELE.spin6.src = '/images/breakroom/keepthecapup/cap6.png';
+      TELE.spin7 = new Image();
+      TELE.spin7.src = '/images/breakroom/keepthecapup/cap7.png';
+      TELE.spin8 = new Image();
+      TELE.spin8.src = '/images/breakroom/keepthecapup/cap8.png';
+      TELE.spin9 = new Image();
+      TELE.spin9.src = '/images/breakroom/keepthecapup/cap9.png';
+      
+
+      TELE.caps = [TELE.spin0, TELE.spin1, TELE.spin2, TELE.spin3, TELE.spin4, TELE.spin5, TELE.spin6, TELE.spin7, TELE.spin8, TELE.spin9];
+
+    //push out our first bottle
+    TELE.spin9.onload = function() {
+      TELE.entities.push(new TELE.bottle());
+    }
+
+
+
+    //Make it all loop for updates and rendering
+    TELE.loop();
+  },
+
+  // this is where all entities will be moved
+  // and checked for collisions, etc.
+  update: function() {
+
+
+
+
+      var i;
+
+      // cycle through all entities and update as necessary
+        for (i = 0; i < TELE.entities.length; i += 1) {
+            TELE.entities[i].update();
+
+            // delete from array if remove property
+            // flag is set to true
+            if (TELE.entities[i].remove) {
+                TELE.entities.splice(i, 1);
+            }
+        }
+
+    },
+
+  // this is where we draw all the entities
+  render: function() {
+
+        TELE.Draw.clear();
+
+        var i;
+
+        //two render functions to allow for layers
+        // cycle through all entities and render to canvas
+        for (i = 0; i < TELE.entities.length; i += 1) {
+          if (TELE.entities[i].render1())
+          {
+              TELE.entities[i].render1();
+          }
+        }
+      // cycle through all entities and render to canvas
+        for (i = 0; i < TELE.entities.length; i += 1) {
+          if (TELE.entities[i].render2())
+          {
+              TELE.entities[i].render2();
+          }
+        }
+
+    },
+
+    // the actual loop
+    // requests animation frame,
+    // then proceeds to update
+    // and render
+  loop: function() {
+
+        requestAnimFrame( TELE.loop );
+
+        TELE.update();
+        TELE.render();
+    }
+};
+
+// ### ADD LISTENERS SO THAT OUR GAME WILL RESIZE -- THIS RESTARTS THE GAME CURRENTLY ##
+
+window.addEventListener('load', TELE.init, false);
+//window.addEventListener('resize', TELE.init, false);
+
+// ### ADD TOUCH LISTENERS ###
+  document.getElementById('game').addEventListener("touchstart", function(e){
+    e.preventDefault();
+    TELE.touchx=e.touches[0].pageX;
+    TELE.touchy=e.touches[0].pageY;
+    handleStart(e);
+  }, false);
+  document.getElementById('game').addEventListener("touchend", function(e){
+    e.preventDefault();
+    handleEnd(e);
+  }, false);
+  //document.getElementById('game').addEventListener("touchmove", function(e){
+  //  e.preventDefault();
+  //  handleMove(e);
+  //}, false);
+  document.getElementById('game').addEventListener("mousedown", function(e){
+    e.preventDefault();
+    TELE.drag=true;
+    TELE.touchx=e.pageX;
+  TELE.touchy=e.pageY;
+    handleStart(e);
+  }, false);
+  document.getElementById('game').addEventListener("mouseup", function(e){
+    e.preventDefault();
+    TELE.drag=false;
+    handleEnd(e);
+  }, false);
+  //window.addEventListener("mousemove", function(e){
+ //   e.preventDefault();
+ //   if(TELE.drag){
+ //     handleMove(e);
+ //   }
+ // }, false);
+
+function handleStart(e){
+  TELE.pop.play();
+  TELE.swiped = true;
+  console.log(e);
+}
+
+function handleEnd(e){
+  TELE.pop.pause();
+  TELE.pop.currentTime = 0;
+  TELE.swiped = false;
+  console.log(e);
+}
+
+//function handleMove(e){
+//  alert(Math.sqrt( (e.touches[0].pagex-=x1)*x2 + (y2-=y1)*y2 ));
+//  if (Math.sqrt( (e.touches[0].pagex-=x1)*x2 + (y2-=y1)*y2 )>100){
+
+//    }
+//  TELE.lastPt = {x:e.touches[0].pageX, y:e.touches[0].pageY}
+//}
+
+// ### MAKE SOME BASIC DRAW FUNCTIONS ##
+
+// abstracts various canvas operations into
+// standalone functions
+TELE.Draw = {
+
+    clear: function() {
+        TELE.ctx.clearRect(0, 0, TELE.canvas.width, TELE.canvas.height);
+    },
+    image: function(img, x, y, w, h) {
+        TELE.ctx.drawImage(img, x, y, w, h);
+    },
+    rect: function(x, y, w, h, col) {
+        TELE.ctx.fillStyle = col;
+        TELE.ctx.fillRect(x, y, w, h);
+    },
+    text: function(string, x, y, size, col) {
+        TELE.ctx.font = '900 '+(size*TELE.textRatio)+'em Museo';
+        TELE.ctx.lineCap = "round";
+        TELE.ctx.lineJoin = "round";
+        TELE.ctx.strokeStyle = "white";
+        TELE.ctx.strokeText(string, x+7, (y*TELE.textRatio+20));
+        TELE.ctx.fillStyle = col;
+        TELE.ctx.fillText(string, x+7, (y*TELE.textRatio+20));
+        TELE.ctx.lineWidth = (15*TELE.textRatio);
+
+ 
+    }
+};
+
+// ### HOW WE HANDLE SOUND ###
+
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }
+}
+
+TELE.bottle = function(){
+  this.x=TELE.dwidth;
+  this.y=TELE.dheight/6;
+  this.state='intro';
+  var flavor = Math.floor((Math.random() * 5));
+  this.img = TELE.bottles[flavor];
+  var RATIO = TELE.dheight*0.4/this.img.width;
+  this.capx=this.x;
+  this.capy=0;
+  this.capdx=0;
+  this.capdy=0;
+  this.grav=-.7;
+  this.anim=0;
+  this.remove = false;
+  this.ratio = TELE.dheight*0.4/this.img.width;
+  this.hitcap=false;
+  this.capw = TELE.caps[0].width*this.ratio;
+  this.caph = TELE.caps[0].height*this.ratio;
+  this.hittimer = 0;
+
+
+  this.update=function(){
+    //intro and exit sliding
+    if (this.state=='intro'||this.state=='exit'){
+      this.x = this.x-29;
+      this.capx = this.capx-29;
+      if ( this.x<TELE.dwidth/2-(TELE.bottle0.width*RATIO)/2 ){
+        this.state='static';
+      }
+
+      //spawn a new bottle after exit anim
+      if (this.x<0-TELE.dheight*0.4){
+        TELE.entities.push(new TELE.bottle());
+        this.remove=true;
+      }
+    }
+    
+    //check and score hits
+    if (TELE.swiped){
+      var capx1 = this.capx+(this.ratio*this.img.width/4);
+      var capy1 = this.capy+(this.ratio*this.img.width/4);
+      var capx2 = this.capx+(this.ratio*this.img.width/4)+ (this.capw);
+      var capy2 = this.capy+(this.ratio*this.img.width/4)+ (this.caph);
+      //alert('cap at X:'+capx1+' '+capx2+' Y:'+capy1+' '+capy2+', touch X:'+TELE.touchx+' Y:'+TELE.touchy);
+      if ( this.hittimer < 1 ) {
+      
+        if ( TELE.touchx < capx1 + this.capw &&
+             TELE.touchx > capx1 - 200 &&
+             TELE.touchy < capy1 + (this.caph * 2.2) &&
+             TELE.touchy > capy1 - (this.caph * 2.2 )) {
+           
+              this.hitcap = true;
+        
+        }
+      }
+    }
+
+    this.hittimer -=1;
+
+    if (this.hitcap){ 
+      if (this.state!='intro'){
+        TELE.score+=1;
+        this.hitcap=false;
+        this.hittimer=10;
+        this.state='capped';
+        this.capdy=-13;
+        this.capdx=Math.random()*20-10;
+      }
+    }
+
+    if (this.state=='capped'){
+      this.capx=this.capx+this.capdx;
+      this.capdy=this.capdy-this.grav;
+      this.capy=this.capy+this.capdy;
+    }
+
+    //bounce off the walls
+    if (TELE.dwidth-(this.capw)<this.capx||this.capx<0-(this.capw)){
+      this.capdx=-1*this.capdx;
+      this.capx=this.capx+this.capdx;
+    }
+
+    //reset if it falls through the floor
+    if (this.capy>TELE.dheight){
+      if (TELE.score>TELE.highscore) {TELE.highscore=TELE.score;}
+      TELE.score=0;
+      this.state='exit';
+    }
+
+    this.anim+=0.5;
+    if (this.anim>9){
+      this.anim=0;
+    }
+  }
+  this.render1=function(){
+    //cap rendering
+    TELE.Draw.image(this.img,this.x,this.y,TELE.dheight*0.4,TELE.dheight*0.4*(this.img.height/this.img.width));
+
+  }
+  this.render2=function(){
+    //cap rendering
+    if ( this.state!=='capped' ) {
+      TELE.Draw.image(TELE.caps[0],this.capx+(this.ratio*this.img.width/4),this.capy+(this.ratio*this.img.width/4),this.capw,this.caph);
+      TELE.Draw.image(TELE.caps[Math.floor(this.anim)],TELE.dheight+5000,this.capy,TELE.dwidth/2,(TELE.dwidth/2)*(TELE.bottle0.height/TELE.bottle0.width));
+      // TELE.Draw.rect(this.capx+(this.ratio*this.img.width/4), this.capy+(this.ratio*this.img.width/4), this.capw, this.caph, 'rgba(255,255,255,0.5');
+    }
+    else {
+      TELE.Draw.image(TELE.caps[Math.floor(this.anim)],this.capx+(this.ratio*this.img.width/4),this.capy+(this.ratio*this.img.width/4),this.capw,this.caph);
+    }
+    TELE.Draw.text('KEEP A LEVEL HEAD.  '+ TELE.score,TELE.scoreX,80,3,'#CA002A');
+    TELE.Draw.text('| cherry NRG drink | score - '+TELE.highscore,TELE.scoreX,130,2,'#CA002A');    
+  }
+}
+
+</script>
+</div>
+
+
+
+
+</div>
+
+
+<div id="fb-root"></div>
+<script>
+                window.fbAsyncInit = function() {
+                  FB.init({
+                    appId      : '1748306442089592',
+                    xfbml      : true,
+                    version    : 'v2.5'
+                  });
+                };
+                (function(d, s, id){
+                   var js, fjs = d.getElementsByTagName(s)[0];
+                   if (d.getElementById(id)) {return;}
+                   js = d.createElement(s); js.id = id;
+                   js.src = "//connect.facebook.net/en_US/sdk.js";
+                   fjs.parentNode.insertBefore(js, fjs);
+                 }(document, 'script', 'facebook-jssdk'));
+              </script>
+
+<script src="/js/bundle.js" type="text/javascript"></script>
+<script src="/js/breakroom/breakroom.js" type="text/javascript"></script>
+
+<script>
+
+$('#privacy_modal, #tos_modal').on('click', 'a[href^="#"]', function (e) {
+  e.preventDefault();
+  
+  var link = $(this);
+  var anchor = link.attr('href');
+  
+  link.closest('.modal').scrollTop($(anchor).position().top + 75);
+});
+
+</script>
+<script>
+  var glURL = "";
+  $('#privacy_modal,#tos_modal').on('shown.bs.modal', function () {
+    var modalType = $(this).data('modalurl');
+    var url = glURL+"/__/legal/us/"+modalType+"/content.html";
+    var $targetModal;
+    if (modalType === "privacy") {
+      $targetModal = $('#privacy_modal')
+    }
+    else if (modalType === "terms") {
+      $targetModal = $('#tos_modal');
+    }
+    var $targetContainer = $targetModal.find('.modal-body');
+    getModalContent(url,$targetContainer);
+  });
+  function getModalContent (url,el){
+    $.ajax({
+      url: url,
+      success: function(data){
+        el.html(data);
+      }});
+  }
+</script>
+<script>
+</script>
+<div id="georedirect_modal" class="modal fade" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+
+<iframe src="" frameborder="0"></iframe>
+</div>
+</div>
+</div>
+<script>
+
+$('#privacy_modal, #tos_modal').on('click', 'a[href^="#"]', function (e) {
+  e.preventDefault();
+  
+  var link = $(this);
+  var anchor = link.attr('href');
+  
+  link.closest('.modal').scrollTop($(anchor).position().top + 75);
+});
+
+</script>
+
+<section id="no-index" data-swiftype-index='false'>
+<script>
+                          var isLoggedin = false;
+            
+          
+        </script>
+</section>
+
+</body>
+</html>
