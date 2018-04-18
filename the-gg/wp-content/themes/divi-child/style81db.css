@@ -1,0 +1,255 @@
+/*
+Theme Name: Divi child theme
+Template: divi
+*/
+
+/* YOUR CSS EDITS GO BELOW THIS LINE AND AND CSS RULES YOU MAKE HERE WILL OVERIDE THE MASTER DIVI THEME CSS RULES */
+
+
+/* Typography */
+
+.et_pb_bg_layout_dark h2 {
+	color: #e55622 !important;
+	}
+
+.et_pb_bg_layout_dark h2.white {
+	color: #fff !important;
+	}
+
+.et_pb_team_member_description h4 {
+	padding-bottom: 20px;
+	}
+.et-pb-contact-message {
+	color: #fff;
+	}
+
+#contact_text a {
+	color: #fff;
+	font-weight: bold;
+	}
+
+/* Menu */
+
+#logo {
+	display: none;
+	}
+.mobile_menu_bar:before {
+	font-size: 50px;
+	}
+.mobile_menu_bar.et_pb_header_toggle {
+	width: 50px;
+	}
+.et-pb-icon {
+	font-size: 4em !important;
+	}
+
+
+/* Header */
+
+#ian_header .header-content-container {
+	margin-top: 180px;
+	}
+.et_pb_fullwidth_header_0.et_pb_fullwidth_header .et_pb_fullwidth_header_subhead {
+	line-height: 1.2;
+	}
+.et_pb_fullwidth_header .et_pb_fullwidth_header_scroll {
+	bottom: 20px;
+	}
+.et_pb_fullwidth_header .et_pb_fullwidth_header_scroll a .et-pb-icon {
+	font-size: 6em;
+	}
+.et_parallax_bg {
+	background-position: top right;
+	}
+
+/* Contact Form */
+
+.et_pb_contact_right {
+	color: #fff;
+	}
+
+/* Social icons */
+
+.et-social-twitter {
+	display: none !important;
+	}
+
+/* Extra Classes */
+
+.white {
+	color: #fff !important;
+	}
+
+/* Footer */
+
+	#footer-bottom {
+		background: #333;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	#footer-info {
+		color: #fff;
+	}
+
+/* Responsiveness */
+
+
+@media (min-width: 1500px) {
+	.header-content {
+		padding-top: 500px !important;
+	}
+	.et_pb_fullwidth_header .et_pb_fullwidth_header_container.right .header-content {
+		margin-right: 10%;
+	}
+	#person_ian {
+		padding-top: 100px;
+		padding-bottom: 73px;
+	}
+	
+	#ian_portrait {
+		padding-top: 0px;
+	}
+	
+	#lessons_section {
+		padding-top: 100px !important;
+		padding-bottom:	100px !important;
+	}
+
+	#ian_guitar {
+		padding-top: 80px;
+	}
+	#ian_piano {
+		padding-top: 80px;
+	}
+}
+
+@media (max-width: 1250px) {
+	#ian_portrait {
+		margin-top: 10%;
+	}
+	#person_ian {
+		padding-top: 100px;
+		padding-bottom: 80px;
+	}
+		#ian_guitar {
+		padding-top: 30%;
+	}
+	#ian_piano {
+		padding-top: 30%;
+	}
+	#portrait2 {
+		padding-top: 20%;
+	}
+	
+}
+@media (max-width: 1100px) {
+	#ian_portrait {
+		margin-top: 30%;
+	}
+	#ian_guitar {
+		padding-top: 50%;
+	}
+	#ian_piano {
+		padding-top: 50%;
+	}
+	#portrait2 {
+		padding-top: 30%;
+	}
+}
+
+/* Mobile menu fix */
+
+@media (max-width: 980px) {
+	.et_header_style_centered header#main-header .logo_container {
+		display: none;
+	}
+	#main-header {
+		background: transparent !important;
+	}
+	.et_header_style_centered #main-header .mobile_nav {
+		background: transparent;
+	}
+	.et_header_style_centered .mobile_nav .select_page {
+		display: none;
+	}
+	.et_header_style_centered #et_mobile_nav_menu {
+		margin-top: 0;
+	}
+	.et_mobile_menu li a {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	}
+}
+
+@media (max-width: 800px) {
+	.et_pb_fullwidth_header .et_pb_fullwidth_header_container.right .header-content {
+		margin-right: auto !important;
+		margin-left: auto !important;
+		float: none !important;
+		text-align: center;
+	}
+	.header-content {
+		padding-top: 0px !important;
+	}
+
+
+	.et_pb_fullwidth_header_container.right .header-content {
+  		margin: 0px 40px;
+	}
+	#ian_portrait {
+		margin-top: 10%;
+	}
+	#person_ian {
+		padding-top: 20px;
+		padding-bottom: 80px;
+	}
+	#ian_guitar {
+		padding-top: 0;
+	}
+	#ian_piano {
+		padding-top: 0;
+		padding-bottom: ;
+	}
+	#portrait2 {
+		padding-top: 0;
+		float: none;
+	}
+
+@media (max-width: 737px) {
+	.et_pb_fullwidth_header .et_pb_fullwidth_header_container.right .header-content {
+		margin-right: auto !important;
+		margin-left: auto !important;
+		float: none !important;
+		text-align: center;
+	}
+	.et_pb_fullwidth_header_0.et_pb_fullwidth_header .header-content h1 {
+		font-size: 40px !important;
+	}
+	.et_pb_fullwidth_header_0.et_pb_fullwidth_header .et_pb_fullwidth_header_subhead {
+    		font-size: 20px !important;
+	}
+	.et_pb_more_button, .et_pb_fullwidth_header .et_pb_fullwidth_header_scroll a .et-pb-icon {
+    		display: none !important;
+	}
+
+	#ian_portrait {
+		margin-top: 10%;
+	}
+	#person_ian {
+		padding-top: 20px;
+		padding-bottom: 80px;
+	}
+	#ian_guitar {
+		padding-top: 0;
+	}
+	#ian_piano {
+		padding-top: 0;
+		padding-bottom: ;
+	}
+	#portrait2 {
+		padding-top: 0;
+		float: none;
+	}
+
+	
+}
